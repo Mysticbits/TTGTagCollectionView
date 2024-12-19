@@ -141,7 +141,7 @@
     self.layer.shadowOpacity = (float)_config.getRightfulStyle.shadowOpacity;
     self.layer.shadowPath = path.CGPath;
     self.layer.shouldRasterize = YES;
-    [self.layer setRasterizationScale:[[UIScreen mainScreen] scale]];
+    [self.layer setRasterizationScale:self.traitCollection.displayScale];
 }
 
 - (void)updateMaskWithPath:(UIBezierPath *)path {
